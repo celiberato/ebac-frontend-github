@@ -1,0 +1,19 @@
+.filtro{
+    filter: grayscale(100%);
+    filter: blur(5px);
+    filter: brightness(40%);
+    filter: invert(30%);
+    filter: opacity(50%);
+}
+
+.filtro:hover {
+    filter: grayscale(0%);
+}
+
+.filtro-2{
+    filter: sepia(100%);
+    border-radius: 50%;
+    filter: drop-shadow(8px 8px 10px black);
+}
+
+

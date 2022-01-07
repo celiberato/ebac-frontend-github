@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>HTML - Formulário Fale Conosco</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/estilos.css">
+	</head>
+	<body>
+
+		<header>
+			<h2>Curso Front-end - HTML</h2>
+			<h4>EBAC - Escola de Artes Criativas & Tecnologia</h4>
+		</header>
+
+		<section>
+
+			<nav>
+				<h3>Aulas</h3>
+				<ul>
+					<li><a href="homepage.html">Home</a></li>
+					<li><a href="01-introducao.html">01-Introdução</a></li>
+					<li><a href="02-listas-e-links.html">02-Listas e Links</a></li>
+					<li><a href="03-formatacao-de-texto.html">03-Formatação de Texto</a></li>
+					<li><a href="04-tabelas.html">04-Tabelas</a></li>
+					<li><a href="05-layouts.html">05-Layouts</a></li>
+					<li><a href="06-formularios.html">06-Formulários</a></li>
+					<li><a href="07-tabela-financeira.html">07-Tabela Financeira</a></li>
+					<li><a href="08-layout-fluidos.html">08-Layout Fluído</a></li>
+				</ul>
+			</nav>
+
+			<article>
+
+				<h1>Contato</h1>
+				<p>Preencha os campos abaixo</p>
+
+				<form method="post">
+
+					<div>
+						<label for="nome">Nome</label>
+						<input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+					</div>
+
+					<div>
+						<label for="email">E-mail</label>
+						<input type="email" name="email" id="email" placeholder="Digite seu email">
+					</div>
+
+					<div>
+						<label for="mensagem">Mensagem</label>
+						<textarea name="mensagem" id="mensagem" rows="5"></textarea>
+					</div>
+
+					<div>
+						<p>
+							<label >Qual linguagem você prefere?</label>
+							<label class="radio-label" for="prefere-html">
+								<input type="radio" name="linguagens" id="prefere-html" value="html">HTML
+							</label>
+							<label class="radio-label" for="prefere-css">
+								<input type="radio" name="linguagens" id="prefere-css" value="css">CSS
+							</label>
+							<label class="radio-label" for="prefere-javascript">
+								<input type="radio" name="linguagens" id="prefere-javascript" value="javascript">JavaScript
+							</label>
+						</p>
+					</div>
+
+					<div>
+						<p>
+							<h5>
+								<label >Quais linguagens você sabe?</label>
+								<label class="radio-label" for="sabe-html">
+									<input type="checkbox" name="linguagens" id="sabe-html" value="html">HTML
+								</label>
+								<label class="radio-label" for="sabe-css">
+									<input type="checkbox" name="linguagens" id="sabe-css" value="css">CSS
+								</label>
+								<label class="radio-label" for="sabe-javascript">
+									<input type="checkbox" name="linguagens" id="sabe-javascript" value="javascript">JavaScript
+								</label>
+							</h5>
+						</p>
+					</div>
+
+					<div>
+						<label >Qual a sua cor favorita?</label>
+						<h5>
+							<select>
+								<option value="Azul">Azul</option>
+								<option value="Verde">Verde</option>
+								<option value="Vermelho" selected>Vermelho</option>
+							</select>
+						</h5>
+					</div>
+
+					<div>
+						<input type="submit" >
+					</div>
+					
+
+				</form>
+
+				
+				
+			</article>
+
+
+		</section>
+
+		<footer>
+			<p>Desenvolvido por Carlos Liberato</p>
+		</footer>
+		
+	</body>
+</html>

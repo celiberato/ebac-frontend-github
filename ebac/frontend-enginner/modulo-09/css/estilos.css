@@ -1,0 +1,110 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: slateblue;
+    padding: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 25%;
+        
+    background: rgb(160, 183, 207);
+    padding: 1.5rem;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section::after {
+    background: #ccc;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color: slateblue;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+nav, article {
+    width: 100%;
+    height: auto;
+}
+}
+
+form div{
+    margin-top: 20px;
+    width: 60%;
+}
+
+input[type=text], input[type=email], textarea {
+    display: inline-block;
+    margin-top: 1px;
+    width: 100%;
+}
+
+radio {
+    font-size: 12px;
+    float: left;
+}
+
+input[type=submit] {
+    display: inline-block;
+    margin-top: 10px;
+    width: 100%;
+    background-color: slateblue;
+    color: white;
+    padding: 10px;
+}
+
+
+label {
+    display: inline-block;
+    width: 100%;
+    color: slateblue;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    border-top: 1px solid  slateblue;
+    padding-top: 5px;
+}
+
+.radio-label{
+    border-top: none !important;
+}
+
+h5 {
+    font-weight: normal;
+}
+
+h4{
+    color: rgb(190, 195, 236);
+}

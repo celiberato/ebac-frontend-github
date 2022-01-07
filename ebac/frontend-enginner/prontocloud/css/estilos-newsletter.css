@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
+
+
+html{
+    font-size: 62.5%;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+body {
+    background-color: lightgray;
+    line-height: 2.5rem;
+    padding-bottom: 30px;
+}
+
+.main-container {
+    width: 700px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+header {
+    background-color: slateblue;
+    padding: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+article {
+    float: left;
+    padding: 20px;
+    width: 85%;
+    background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section::after {
+    background: #ccc;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 20%;        
+    background: rgb(160, 183, 207);
+    padding: 1.5rem;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li{
+    font-size: 1.6rem;
+}
+
+section article {
+    display: block;
+    float: left;
+    width: 74%;
+    background-color: rgb(49, 18, 119);
+}
+
+.titulo {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 48px;
+}
+
+h1{
+    font-size: 3rem;
+    color:darkblue;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 2rem;
+    color:rgb(218, 204, 252);
+}
+h3{
+    font-size: 1.8rem;
+    color: darkblue;
+}
+h4{
+    font-size: 1.6rem;
+    color: crimson;
+}
+
+p{
+    font-size: 1.6rem;
+    color: black;
+    font-family: 'Spline Sans', sans-serif;
+    padding: 20px 20px 20px 20px;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'Spline Sans', sans-serif;
+    padding: 10px 10px 10px 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: slateblue;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+}
+
+
+td ul li {
+    color: black;
+    font-size: 16px;
+    list-style-type: upper-roman;
+    margin-left: 50px;
+}
+
+td a {
+    font-size: 1.6rem;
+}
+
+
+.filtro{
+    filter: blur(0.2rem);
+}
+
+.filtro:hover{
+    filter: blur(0rem);
+    filter: sepia(10%);
+}
+
+
+input[type=text], input[type=email], textarea {
+    display: inline-block;
+    margin-top: 1px;
+    width: 100%;
+    font-size: 1.7rem;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    color: slateblue;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    border-top: 1px solid  slateblue;
+    padding-top: 5px;
+}
+
+
+form div{
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+
+    p{
+        font-size: 2.5rem;
+        color: black;
+        font-family: 'Spline Sans', sans-serif;
+        padding: 20px 20px 20px 20px;
+        line-height: 2.5rem;
+    }    
+
+    h3{
+        font-size: 2.8rem;
+        color: darkblue;
+    }
+
+    h4{
+        font-size: 2.1rem;
+        color: crimson;
+    }
+
+}

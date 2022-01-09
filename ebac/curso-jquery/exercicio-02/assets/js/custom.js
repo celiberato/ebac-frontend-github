@@ -20,6 +20,10 @@ $(document).ready(function(){
 
     }
 
+    // mascaras-------------------------------------
+    $('.cep').mask('00000-000');
+    $('.telefone').mask('0000-0000');
+
     // inscrever-me---------------------------------
     $('#nome').on('blur', function(e){
         e.preventDefault();

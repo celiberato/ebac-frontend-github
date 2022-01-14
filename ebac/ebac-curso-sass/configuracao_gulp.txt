@@ -1,0 +1,51 @@
+cd exercicio-01
+
+npm init -y
+
+npm install gulp-cli -g
+
+npm install jquery
+
+npm install bootstrap
+
+npm install gulp
+
+>>>>>> package.json
+"devDependecies":{
+  "gulp": "^4.0.2"
+},
+
+
+pm cache clean --force
+
+npm install gulp-concat gulp-cssmin --save-dev
+
+npm install gulp-rename --save-dev
+
+npm install gulp-uglify --save-dev
+
+npm install gulp-image --save-dev
+
+npm install gulp-htmlmin --save-dev
+
+npm install --save owl.carousel
+
+npm install jquery-mask-plugin
+
+npm install node-sass gulp-sass
+
+gulp styles
+gulp scripts
+gulp images
+gulp default
+
+//--------------npm install --save-dev gulp-babel @babel/core @babel/preset-env
+
+
+npm i browser-sync --save
+
+npm install
+gulp serve
+
+//--------------npm install --global http-server
+//--------------http-server ./dist

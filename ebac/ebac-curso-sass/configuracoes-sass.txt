@@ -1,0 +1,6 @@
+npm install -g sass
+
+cd src
+sass ./scss/styles.scss ./assets/css/estilos.css
+
+npm rebuild node-sass

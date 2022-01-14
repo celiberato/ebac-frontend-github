@@ -1,0 +1,224 @@
+@import 'margens';
+@import 'inputs';
+@import 'alert';
+
+.card {
+    width: 100%;
+    float: left;
+    padding: 20px;
+}
+
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: $font-default;
+}
+
+body {
+    background-color: lightgray;
+    line-height: 1.9rem;
+}
+
+.container {
+/*    width: 1198px;*/
+    margin: 0 auto;
+    background-color: white;
+}
+
+header {
+    background-color: slateblue;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+
+.nav-item{
+    font-size: 1.7rem;
+    color:darkblue;   
+    text-decoration-line: underline;
+    padding: 0px 0px 0px 0px !important;
+    margin-left: 0px;
+}
+
+
+.btn{
+    font-size: 1.4rem !important;
+    width: 20rem;
+}
+
+.table-modal{
+    font-size: 1.4em;
+}
+
+footer {
+    background-color: slateblue;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+
+section{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .carousel-item img {
+        height: 200px;
+    }
+
+    button{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-item img {
+        height: 410px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .carousel-item img {
+        height: 410px;
+    }
+}
+
+
+.icone-titulo{
+    width: 50px; 
+    float: left; 
+    margin-right: 20px;
+
+    animation-name: icones-animations;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+.invalid {
+    border-color: red !important; 
+    border-style: solid !important;
+    border-width: 3px !important;
+}
+
+
+.card {
+    .img-produto{
+        border-radius: 10px;
+    }
+}
+
+#home {
+    .titulo {
+        font-family: $font-default;
+        font-size: 48px;
+        font-weight: 800;
+    }
+}
+
+
+#carousel {
+    .carousel-caption{
+        width: 50%;
+        margin-left: 30%;
+    }
+    
+    
+    .carousel-caption h1{
+        text-align: center;
+        color: crimson;
+        font-weight: 900;
+        font-size: 6rem !important;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding-left: 20px;
+    }
+    
+    .carousel-caption h2{
+        text-align: center;
+        color: black;
+        font-weight: 900;
+        font-size: 40px;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .carousel-item img{
+        filter: grayscale(100%);
+    }    
+}
+
+
+.imagem-circulo{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+.imagem-circulo-label{
+    color: black !important;
+    padding: 20px !important;
+}
+
+.col-imagens-circulo{
+    margin-left: 15%; 
+    text-align: center;
+}
+
+.imagem-container{
+    margin-left: -20px;
+}
+
+.accordion-body{
+    font-size: 14px;
+}
+
+.accordion-titulo{
+    font-size: 16px;
+    color: black !important;
+}
+
+
+@keyframes icones-animations{
+    0% {
+        transform: rotate(360deg);
+        opacity: .1;
+    }
+    20% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }    
+    30% {
+        transform: scale(100%);
+        opacity: 1;
+    }    
+    100% {
+        transform: scale(100%);
+        opacity: 1;
+    }    
+}
+
+
+.hamburger{
+    .dropdown-item{
+        font-size: 2.5rem;
+        margin: 10 10;
+        width: 200px;
+    }
+
+   
+    img {
+        width: 70px;
+    }
+}

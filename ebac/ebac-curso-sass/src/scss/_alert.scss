@@ -1,0 +1,30 @@
+@import 'vars';
+
+@mixin theme-alert-erro ($color: $color-font-erro){
+    color: $color;
+}
+
+@mixin theme-alert-sucesso ($color: $color-font-sucesso){
+    color: $color;
+}
+
+#msg-erro-contato{ 
+    @include theme-alert-erro;
+}
+
+#msg-erro-cadastro{ 
+    @include theme-alert-erro;
+}
+
+#msg-erro-inscrever{ 
+    @include theme-alert-erro;
+}
+
+
+#msg-sucesso-contato{
+    @include theme-alert-sucesso(green);
+}
+
+#msg-sucesso-cadastro{
+    @include theme-alert-sucesso;
+}

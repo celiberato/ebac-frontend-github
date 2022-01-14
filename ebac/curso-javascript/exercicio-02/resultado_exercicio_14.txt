@@ -1,11 +1,11 @@
 Exercícios:
 1. Resolva as operações:
-? 10 + 15 = 25
-? “10” + 2 = 102
-? “10” * 2 = 20
-? “10” / 3 = 3.33
-? “10” % 3 = 1
-? 10 + true = 11
+? 10 + 15 = 25 ---(NUMERICO)
+? “10” + 2 = 102 
+? “10” * 2 = 20 ---(NUMERICO)
+? “10” / 3 = 3.33 ---(NUMERICO)
+? “10” % 3 = 1 ---(NUMERICO)
+? 10 + true = 11 ---(NUMERICO)
 ? 10 == ”10” = true
 ? 10 === “10” = false
 ? 10 < 11 =true
@@ -13,23 +13,23 @@ Exercícios:
 ? 10 <= 10.1 = true
 ? 10 > 9.99 = true
 ? 10 != “dez” =true
-? 10 + true =11
+? 10 + true =11  ---(NUMERICO)
 ? “dez” + true = false
-? 10 + false = 10
-? 10 * false = 0
-? true + true = 2
-? 10++ = 11
-? 10-- =9
+? 10 + false = 10  ---(NUMERICO)
+? 10 * false = 0 ---(NUMERICO)
+? true + true = 2 ---(NUMERICO)
+? 10++ = 11 ---(NUMERICO)
+? 10-- =9 ---(NUMERICO)
 ? 1 & 1 = true
 ? 1 & 0 = false
 ? 0 & 0 = false
 ? 1 & 0 = false
-? 0 / 1 = 0
+? 0 / 1 = 0 ---(NUMERICO)
 ? 5 + 5 == 10 = true
 ? “5” + ”5” == 10 = false
 ? “5” * 2 > 9 = true
-? (10 + 10) * 2 = 40
-? 10 + 10 * 2 =30
+? (10 + 10) * 2 = 40 ---(NUMERICO)
+? 10 + 10 * 2 =30 ---(NUMERICO)
 
 2. Responda as perguntas de acordo com as variáveis.
 

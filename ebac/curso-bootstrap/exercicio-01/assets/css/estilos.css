@@ -1,0 +1,129 @@
+.mt-20{
+    margin-top: 20px;
+}
+
+.ml-10{
+    margin-left: 20px;
+}
+
+.mr-10{
+    margin-right: 20px;
+}
+
+.card {
+    width: 100%;
+    float: left;
+    padding: 20px;
+}
+
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+input, textarea {
+    margin-bottom: 2rem !important;
+}
+
+.titulo {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 48px;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+body {
+    background-color: lightgray;
+    line-height: 1.9rem;
+}
+
+.container {
+    width: 1198px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+header {
+    background-color: slateblue;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color:darkblue;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+h2{
+    font-size: 2rem;
+    color:darkblue;
+}
+h3{
+    font-size: 1.8rem;
+    color:darkblue;
+}
+h4{
+    font-size: 1.6rem;
+    color: crimson;
+}
+
+p{
+    font-size: 1.6rem;
+    color:darkblue;
+    font-family: 'Spline Sans', sans-serif;
+    padding: 5px 5px 5px 5px;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'Spline Sans', sans-serif;
+    padding: 10px 0px 10px 0px;
+}
+
+.nav-item{
+    font-size: 1.7rem;
+    color:darkblue;   
+    text-decoration-line: underline;
+}
+
+input[type=text], input[type=email], textarea {
+    display: inline-block;
+    margin-top: 1px;
+    width: 100%;
+    font-size: 1.7rem;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    border-top: 1px solid  slateblue;
+    padding-top: 5px;
+}
+
+.btn{
+    font-size: 1.8rem !important;
+    width: 20rem;
+}
+
+.table-modal{
+    font-size: 1.4em;
+}
+
+footer {
+    background-color: slateblue;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+}

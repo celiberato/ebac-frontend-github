@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <title>Cadastro </title>
+</head>
+<body>
+
+    <div class="container">
+        <header id="home">
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <span class="titulo">&copy; PRONTO CLOUD</span>
+                    </center>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+
+        <section id="cadastro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-12">
+                        <img src="./assets/icons/novo-produto.png" class="icone-titulo">
+                        <h1>Cadastro</h1>
+                        <p>Faça compras e receba seu pedido em casa.</p>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="input-group">
+                                        <label for="cidade">Nome</label>
+                                        <input class="form-control" type="text" name="nome" placeholder="digite seu nome">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="input-group">
+                                        <label for="cidade">Email</label>
+                                        <input class="form-control" type="email" name="email" placeholder="digite seu email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-12 col-12">
+                                    <div class="input-group">
+                                        <label for="endereco">Endereço</label>
+                                        <input class="form-control" type="text" name="endereco" placeholder="digite seu endereço">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-12">
+                                    <div class="input-group">
+                                        <label for="cidade">Cidade</label>
+                                        <input class="form-control" type="text" name="cidade" placeholder="digite seu cidade">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+                                    <div class="input-group">
+                                        <label for="estado">Estado</label>
+                                        <select name="estado" class="form-control-lg">
+                                            <option value="SP">São Paulo</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="MG">Minas Gerais</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+                                    <div class="input-group">
+                                        <label for="cep">Cep</label>
+                                        <input class="form-control" type="text" name="cep" placeholder="digite seu cep">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="input-group">
+                                        <label for="bairro">Bairro</label>
+                                        <input class="form-control" type="text" name="bairro" placeholder="digite seu bairro">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="input-group">
+                                        <label for="bairro">Telefone</label>
+                                        <input class="form-control" type="text" name="telefone" placeholder="digite seu telefone">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="input-group">
+                                        <label for="informacoes">Informações</label>
+                                        <textarea class="form-control" name="informacoes" id="informacoes" rows="6">
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="checkbox">
+                                    <label><input class="mr-10" type="checkbox" name="promocionais" id="promocionais">Aceito receber mensagens promocionais</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <a class="btn btn-lg btn-success mt-20 mr-10" href="#home" data-bs-toggle="modal" data-bs-target="#modal-1">Realizar Cadastro</a>
+                                    <a class="btn btn-lg btn-secondary mt-20" href="#home">Voltar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modal fade" id="modal-1"> 
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./assets/icons/novo-produto.png" class="icone-titulo">
+                        <h2 class="modal-title">Inscrever-me na lista</h2>
+                        <button class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Preencha os campos para receber novidades e promoções:</h3>
+
+                        <form class="form-inline" style="padding: 20px 20px 20px 20px;">
+                            <div class="form-group mb-10">
+                                <input type="text" class="form-control" name="nome" id="nome" placeholder="nome" required>
+                            </div>
+                            <div class="form-group mb-10">
+                                <input type="email" class="form-control" name="email" id="nome" placeholder="email" required>
+                            </div>
+                            <button type="submit" class="btn btn-success mr-10">Receber novidades</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row">
+                            <div class="col-12" style="text-align: center;">
+                                <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <footer>
+            &copy; ProntoCloud todos os direitos reservados.
+            <br>
+            <small>Desenvolvido por Carlos Liberato</small>
+        </footer>
+
+    </div>
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

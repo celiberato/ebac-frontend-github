@@ -57,8 +57,32 @@ button:hover {
     font-size: 2rem;
     text-align: center;
     padding: 2rem;
+    color: red
 }
 
 .erro {
     border-color: #f00;
+}
+
+.cep {
+    border-color: #f00;
+}
+
+.cidade {
+    border-color: #f00;
+}
+
+.erro-label {
+    border-color: #f00;
+    font-size: 14px;
+    color: red !important;
+    padding-top: 3px;
+}
+
+
+#resultado-frm1{
+    font-size: 10px;
+}
+#resultado-frm2{
+    font-size: 10px;
 }

@@ -296,8 +296,8 @@ section {
   margin: 10 10;
   width: 200px;
 }
-.hamburger img {
-  width: 70px;
+.hamburger #img-hamburger {
+  width: 4rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */

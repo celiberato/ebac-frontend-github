@@ -50,7 +50,14 @@ if(formulario1)
         evento.preventDefault();
         evento.stopPropagation();
 
-        if( this.getAttribute('class').match(/erro/) ) {
+        let todosPreenchidos = document.getElementsByClassName('n1')!="" && 
+                document.getElementsByClassName('n2')!="" &&
+                document.getElementsByClassName('n3')!="" &&
+                document.getElementsByClassName('n4')!="";
+
+
+        if( !todosPreenchidos ) {
+            document.getElementById('resultado-frm1').innerHTML = "• Necessário preencher todos os campos";
             return false;
         }
         
@@ -72,122 +79,279 @@ if(formulario1)
 
         texto = aprovacao(notas)
 
-        document.getElementById('resultado').innerHTML = texto;
+        document.getElementById('resultado-frm1').innerHTML = texto;
 
     });
 
+disparaEventosValidacoes();
 
-function validaCampo(elemento){
+function validNome(elemento){
 
     elemento.addEventListener('focusout', function(event) {
 
         event.preventDefault();
 
-        if(this.value == ""){
-            document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em vermelho";
-            this.classList.add('erro');
-            this.parentNode.classList.add('erro');
-            return false;
-        } else {
-            document.querySelector('.mensagem').innerHTML = "";
-            this.classList.remove('erro');
-            this.parentNode.classList.remove('erro');
-        }
-
+        invocaValidacaoNome(this);
     });
 
 }
 
-function validaCampoNumerico(elemento){
+function invocaValidacaoNome(elemento){
+    if(elemento.value == ""){
+        document.querySelector('.erro-nome').innerHTML = "• Favor preencher o nome";
+        elemento.classList.add('erro');
+        elemento.parentNode.classList.add('erro');
+        return false;
+    } else {
+        document.querySelector('.erro-nome').innerHTML = '';
+        elemento.classList.remove('erro');
+        elemento.parentNode.classList.remove('erro');
+    }
+}
+
+
+function validEmail(elemento){
 
     elemento.addEventListener('focusout', function(event) {
 
         event.preventDefault();
 
-        let numero = this.value.match(/^[\d]5-[\d]3/) ? this.value.replace(/-/, "") : this.value; 
-
-        if(numero != "" && numero.match(/[0-9]*/) && numero >= 0 && numero <= 10){
-            document.querySelector('.mensagem').innerHTML = "";
-            this.classList.remove('erro');
-            this.parentNode.classList.remove('erro');
-        } else {
-            document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em destaque";
-            this.classList.add('erro');
-            this.parentNode.classList.add('erro');
-            return false;
-        }
+        invocaValidacaoEmail(this);
 
     });
 
 }
 
 
-function validaEmail(elemento){
+function invocaValidacaoEmail(elemento){
+    const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
+    if(elemento.value.match(emailValido)) {
+        document.querySelector('.erro-email').innerHTML = "";
+        elemento.classList.remove('erro');
+        elemento.parentNode.classList.remove('erro');
+    } else {
+        document.querySelector('.erro-email').innerHTML = "• Favor preecher o campo email";
+        elemento.classList.add('erro');
+        elemento.parentNode.classList.add('erro');
+        return false;
+    }
+
+}
+
+function validUF(elemento){
 
     elemento.addEventListener('focusout', function(event) {
 
         event.preventDefault();
 
-        const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
-        if(this.value.match(emailValido)) {
-            document.querySelector('.mensagem').innerHTML = "";
-            this.classList.remove('erro');
-            this.parentNode.classList.remove('erro');
-        } else {
-            document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em destaque";
-            this.classList.add('erro');
-            this.parentNode.classList.add('erro');
-            return false;
-        }
+        invocaValidacaoUF(this);
+    });
+
+}
+
+
+function invocaValidacaoUF(elemento){
+    const listaUF = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "GO", "ES", "MA",
+    "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN",
+    "RS", "RO", "RR", "SP", "SC", "SE", "TO"];
+
+    if(listaUF.includes(elemento.value.toUpperCase())) {
+        document.querySelector('.erro-uf').innerHTML = "";
+        elemento.classList.remove('erro');
+        elemento.parentNode.classList.remove('erro');
+    } else {
+        document.querySelector('.erro-uf').innerHTML = "• Favor preecher o campo UF no formato XX";
+        elemento.classList.add('erro');
+        elemento.parentNode.classList.add('erro');
+        return false;
+    }
+
+}
+
+function validTelefone(elemento){
+
+    elemento.addEventListener('focusout', function(event) {
+
+        event.preventDefault();
+
+        invocaValidacaoTelefone(this);
+    });
+
+}
+
+function invocaValidacaoTelefone(elemento){
+    let contemTraco = elemento.value.includes('-');
+
+    let numero = elemento.value.match(/^[\d]2-[\d]9/) ? elemento.value.replace(/-/, "") : elemento.value; 
+
+    if(numero != "" && numero==elemento.value && contemTraco){
+        document.querySelector('.erro-telefone').innerHTML = "";
+        elemento.classList.remove('erro');
+        elemento.parentNode.classList.remove('erro');
+    } else {
+        document.querySelector('.erro-telefone').innerHTML = "• Favor preecher o campo telefone no formato 00-000000000";
+        elemento.classList.add('erro');
+        elemento.parentNode.classList.add('erro');
+        return false;
+    }
+
+}
+
+function validCEP(elemento){
+
+    elemento.addEventListener('focusout', function(event) {
+
+        event.preventDefault();
+
+
+        invocaValidacaoCEP(this);
+
+    });
+
+}
+
+function invocaValidacaoCEP(elemento){
+    let contemTraco = elemento.value.includes('-');
+
+    let numero = elemento.value.match(/^[\d]5-[\d]3/) ? elemento.value.replace(/-/, "") : elemento.value; 
+
+    if(numero != "" && numero==elemento.value && contemTraco){
+        document.querySelector('.erro-cep').innerHTML = "";
+        elemento.classList.remove('erro');
+        elemento.parentNode.classList.remove('erro');
+    } else {
+        document.querySelector('.erro-cep').innerHTML = "• Favor preecher o campo cep";
+                    
+        elemento.classList.add('erro');
+        elemento.parentNode.classList.add('erro');
+        return false;
+    }
+
+}
+
+function validCidade(elemento){
+
+    elemento.addEventListener('focusout', function(event) {
+
+        event.preventDefault();
+
+        invocaValidacaoCidade(this);
 
     });
 
 }
 
 
-function validaUF(elemento){
+function invocaValidacaoCidade(elemento){
+    let texto = elemento.value; 
 
-    elemento.addEventListener('focusout', function(event) {
+    if(texto != ""){
+        document.querySelector('.erro-cidade').innerHTML = "";
+        elemento.classList.remove('erro');
+        elemento.parentNode.classList.remove('erro');
+    } else {
+        document.querySelector('.erro-cidade').innerHTML = "• Favor preecher o campo cidade";
+                    
+        elemento.classList.add('erro');
+        elemento.parentNode.classList.add('erro');
+        return false;
+    }
 
-        event.preventDefault();
+}
 
-        const listaUF = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "GO", "ES", "MA",
-        "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN",
-        "RS", "RO", "RR", "SP", "SC", "SE", "TO"];
+function disparaEventosValidacoes(){
+    let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
+    let camposNome = document.querySelectorAll('input.nome');
+    let camposEmail = document.querySelectorAll('input.email');
+    let camposUF = document.querySelectorAll('input.uf');
+    let camposTelefone = document.querySelectorAll('input.telefone');
+    let camposCEP = document.querySelectorAll('input.cep');
+    let camposCidade = document.querySelectorAll('input.cidade');
     
-        if(listaUF.includes(this.value.toUpperCase())) {
-            document.querySelector('.mensagem').innerHTML = "";
-            this.classList.remove('erro');
-            this.parentNode.classList.remove('erro');
+    for( let emFoco of camposNome) {
+        validNome(emFoco);
+    }
+    
+    
+    for( let emFoco of camposEmail) {
+        validEmail(emFoco);
+    }
+    
+    for( let emFoco of camposUF) {
+        validUF(emFoco);
+    }
+    
+    for( let emFoco of camposTelefone) {
+        validTelefone(emFoco);
+    }
+    
+    for( let emFoco of camposCEP) {
+        validCEP(emFoco);
+    }
+    
+    for( let emFoco of camposCidade) {
+        validCidade(emFoco);
+    }    
+}
+
+
+function invocaValidacoes(){
+    let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
+    let camposNome = document.querySelectorAll('input.nome');
+    let camposEmail = document.querySelectorAll('input.email');
+    let camposUF = document.querySelectorAll('input.uf');
+    let camposTelefone = document.querySelectorAll('input.telefone');
+    let camposCEP = document.querySelectorAll('input.cep');
+    let camposCidade = document.querySelectorAll('input.cidade');
+    
+    for( let emFoco of camposNome) {
+        invocaValidacaoNome(emFoco);
+    }
+    
+    
+    for( let emFoco of camposEmail) {
+        invocaValidacaoEmail(emFoco);
+    }
+    
+    for( let emFoco of camposUF) {
+        invocaValidacaoUF(emFoco);
+    }
+    
+    for( let emFoco of camposTelefone) {
+        invocaValidacaoTelefone(emFoco);
+    }
+    
+    for( let emFoco of camposCEP) {
+        invocaValidacaoCEP(emFoco);
+    }
+    
+    for( let emFoco of camposCidade) {
+        invocaValidacaoCidade(emFoco);
+    }    
+}
+
+const formulario2 = document.getElementById('formulario-02');
+
+if(formulario2)
+    formulario2.addEventListener('submit', function( evento ){
+
+        evento.preventDefault();
+        evento.stopPropagation();
+
+        invocaValidacoes();
+
+       
+        let todosPreenchidos = 
+                document.getElementById('nome').value!="" &&
+                document.getElementById('email').value!="" &&
+                document.getElementById('telefone').value!="" &&
+                document.getElementById('cidade').value!="" &&
+                document.getElementById('uf').value!="";
+
+        if(todosPreenchidos){
+            document.getElementById('resultado-frm2').innerHTML = "Formulário de cadastro enviado com sucesso!";
         } else {
-            document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em destaque";
-            this.classList.add('erro');
-            this.parentNode.classList.add('erro');
-            return false;
+            document.getElementById('resultado-frm2').innerHTML = "Favor preencher todos os campos obrigatórios!";
         }
 
     });
-
-}
-
-
-let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
-let camposNumericos = document.querySelectorAll('input.numero');
-let camposEmail = document.querySelectorAll('input.email');
-let camposUF = document.querySelectorAll('input.uf');
-
-for( let emFoco of camposObrigatorios) {
-    validaCampo(emFoco);
-}
-
-for( let emFoco of camposNumericos) {
-    validaCampoNumerico(emFoco);
-}
-
-for( let emFoco of camposEmail) {
-    validaEmail(emFoco);
-}
-
-for( let emFoco of camposUF) {
-    validaUF(emFoco);
-}

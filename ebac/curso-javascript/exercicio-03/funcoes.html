@@ -11,33 +11,36 @@
 
     <div class="container">
 
-        <div class="mensagem"></div>
-
         <form id="formulario-01">
             <h2>Cálculo de média</h2>
             <p>Preencha as notas de 0 a 10</p>
-            <input type="text" placeholder="digite um número" class="numero" name="n1">
-            <input type="text" placeholder="digite um número" class="numero" name="n2">
-            <input type="text" placeholder="digite um número" class="numero" name="n3">
-            <input type="text" placeholder="digite um número" class="numero" name="n4">
+            <input type="number" placeholder="digite um número" class="numero n1" name="n1">
+            <input type="number" placeholder="digite um número" class="numero n2" name="n2">
+            <input type="number" placeholder="digite um número" class="numero n3" name="n3">
+            <input type="number" placeholder="digite um número" class="numero n4" name="n4">
             <button type="submit">Enviar</button>
+            <h2 id="resultado-frm1"></h2>
         </form>
+
 
         <form id="formulario-02">
             <h2>Faça seu cadastro</h2>
-            <input type="text" placeholder="digite seu nome" class="obrigatorio" name="nome">
-            <input type="text" placeholder="digite seu email" class="obrigatorio email" name="email">
-            <input type="text" placeholder="digite seu telefone" class="numero" name="telefone" maxlength="11">
-            <input type="text" placeholder="digite seu cep" class="numerico" name="cep" maxlength="9">
-            <input type="text" placeholder="digite seu cidade" class="" name="cidade">
-            <input type="text" placeholder="digite seu uf" class="uf" name="uf">
+            <div class="mensagem"></div>
+            <input type="text" placeholder="digite seu nome" class="nome" name="nome" id="nome">
+            <h2 class="erro-nome erro-label"></h2>
+            <input type="text" placeholder="digite seu email" class="email" name="email" id="email">
+            <h2 class="erro-email erro-label"></h2>
+            <input type="text" placeholder="Telefone: 00-000000000" class="telefone" name="telefone" id="telefone" maxlength="11">
+            <h2 class="erro-telefone erro-label"></h2>
+            <input type="text" placeholder="Cep: 00000-000" class="cep" name="cep" id="cep" maxlength="9">
+            <h2 class="erro-cep erro-label"></h2>
+            <input type="text" placeholder="digite seu cidade" class="cidade" name="cidade" id="cidade">
+            <h2 class="erro-cidade erro-label"></h2>
+            <input type="text" placeholder="digite seu uf" class="uf" name="uf" id="uf">
+            <h2 class="erro-uf erro-label"></h2>
             <button type="submit">Enviar</button>
+            <h2 id="resultado-frm2"></h2>
         </form>
-
-        <div id="resultado">
-            
-        </div>
-
     </div>
 
     <script type="text/javascript" src="./js/script.js"></script>

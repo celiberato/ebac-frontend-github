@@ -108,3 +108,23 @@ h5 {
 h4{
     color: rgb(190, 195, 236);
 }
+
+
+
+@media (max-width: 350px){
+    header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 800px){
+    header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 2000px){
+    header h2 {
+        font-size: 2rem;
+    }
+}

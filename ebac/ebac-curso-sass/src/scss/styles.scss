@@ -1,3 +1,4 @@
+@import 'vars';
 @import 'margens';
 @import 'inputs';
 @import 'alert';
@@ -218,7 +219,7 @@ section{
     }
 
    
-    #img-hamburger {
-        width: 4rem;
+    img {
+        width: 3rem;
     }
 }

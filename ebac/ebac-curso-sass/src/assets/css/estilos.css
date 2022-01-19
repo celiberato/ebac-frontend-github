@@ -30,7 +30,7 @@ input, textarea, select {
   margin-bottom: 1.2rem !important;
 }
 
-h1 {
+.titulo-h1 {
   font-size: 2.8rem !important;
   font-weight: 700 !important;
   color: darkblue;
@@ -39,7 +39,7 @@ h1 {
   padding-left: 5 px !important;
 }
 
-h2 {
+.titulo-h2 {
   font-weight: 900;
   font-size: 2rem;
   color: darkblue;
@@ -55,7 +55,7 @@ h4 {
   color: crimson;
 }
 
-p {
+.titulo-p {
   font-size: 1.6rem;
   color: darkblue;
   font-family: "Spline Sans", sans-serif;
@@ -296,8 +296,27 @@ section {
   margin: 10 10;
   width: 200px;
 }
-.hamburger #img-hamburger {
-  width: 4rem;
+.hamburger img {
+  width: 3rem;
 }
 
-/*# sourceMappingURL=estilos.css.map */
+
+#home__sobre .home__sobre__p {
+  font-size: 1.6rem;
+  color:darkblue;
+  font-family: $font-default;
+  padding: 5px 5px 5px 5px;
+}
+
+#home__sobre .home__sobre__h1{
+  font-size: 2.8rem !important;
+  font-weight: 700 !important;
+  color:darkblue;
+  text-align: left;
+  margin-bottom: 5px;
+  padding-left: 5 px !important;
+}
+
+#home__sobre .home__sobre__voltar{
+  font-size: medium;
+}

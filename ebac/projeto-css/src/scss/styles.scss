@@ -1,8 +1,5 @@
-$color-font: #33d ;
-$color-bg-default: #a9f;
-$color-bg-boxes: #FD3;
-$font-default: Arial, Helvetica, sans-serif;
-$font-size-default: 1.6rem;
+@import 'vars';
+@import 'vitrine';
 
 html {
     font-size: 62.5%;
@@ -20,7 +17,11 @@ h1 {
 }
 
 h2 {
+    font-family: 'Rubik Beastly', cursive;
     margin-top: 4rem;
+    font-size: 8rem;
+    font-weight: 100;
+
 }
 
 header,
@@ -49,6 +50,12 @@ header, section, footer {
 }
 
 #produtos {
+    font-size: large;
 }
 
-@import 'vitrine'
+
+
+.bg-bureau {
+    background-image: url('./../assets/images/bureau.jpg');
+}
+ 

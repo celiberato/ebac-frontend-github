@@ -1,3 +1,5 @@
+@import 'vars';
+
 .vitrine {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -12,6 +14,11 @@
         align-items: flex-start;
         min-height: 20rem;
         padding: .25rem 1rem;
+        margin: 15px 15px 15px 15px;
+        &:hover {
+            -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
+            box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);    
+        }
     }
 
     &__image {
@@ -31,5 +38,11 @@
         text-decoration: none;
         align-self: center;
         margin-bottom: 2rem;
+        -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
+        box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);    
+        &:hover {
+            opacity: 0.5;
+            box-shadow: 5px 5px 10px 1px rgba(30, 11, 106, 0.5); 
+        }
     }
 }

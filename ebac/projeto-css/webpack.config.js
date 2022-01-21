@@ -43,7 +43,7 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: './assets/[name].[ext]'
+                        name: './assets/images/[name].[ext]'
                     }
                 }
             },
@@ -57,6 +57,10 @@ module.exports = {
         new HtmlWebpack({
             filename: 'index.html',
             template: './src/index.html'
+        }),
+        new HtmlWebpack({
+            filename: 'teste.html',
+            template: './src/teste.html'
         }),
         new HtmlWebpackLiveReload(),
         new MiniCssExtract({

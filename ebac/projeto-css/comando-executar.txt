@@ -1,0 +1,6 @@
+npm install
+
+npm rebuild node-sass
+
+yarn global add node-sass
+

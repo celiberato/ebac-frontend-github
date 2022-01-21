@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpack = require('html-webpack-plugin')
 const MiniCssExtract = require('mini-css-extract-plugin')
 const HtmlWebpackLiveReload = require('html-webpack-live-reload-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 

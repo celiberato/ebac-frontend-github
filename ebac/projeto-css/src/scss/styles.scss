@@ -38,12 +38,17 @@ footer {
     max-width: 90vw;
 }
 
+header, section, footer {
+    display: block;
+    float: left;
+    width:100%;
+}
+
 #sobre {
     background-color: white;
 }
 
 #produtos {
-
 }
 
 @import 'vitrine'

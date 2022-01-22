@@ -58,10 +58,6 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html'
         }),
-        new HtmlWebpack({
-            filename: 'teste.html',
-            template: './src/teste.html'
-        }),
         new HtmlWebpackLiveReload(),
         new MiniCssExtract({
             filename: 'style.css'

@@ -1,28 +1,36 @@
 @import 'vars';
 @import 'vitrine';
+@import 'home';
 
 html {
     font-size: 62.5%;
 }
 
 body {
-    background-color: $color-bg-default;
-    font-family: $font-default;
+    background-color: white;
+    font-family: $font-family-body;
 }
 
 h1 {
-    color: $color-font;
+    font-family: $font-family-body;
+    color: $color-font-primary;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 1rem;
+    font-size: 5rem;
+    font-weight: 800;
 }
 
 h2 {
-    font-family: 'Rubik Beastly', cursive;
-    margin-top: 4rem;
-    font-size: 8rem;
-    font-weight: 100;
+    font-family: $font-family-body;
+    color: $color-font-primary;
+    margin-top: 2rem;
+    font-size: $font-size-title;
+    font-weight: 800;
 
 }
+
+
+
 
 header,
 section,
@@ -30,13 +38,16 @@ footer {
     display: block;
     float: left;
     width: 100%;
+    padding: 20px 20px 20px 20px;
 }
 
 .container {
+    background-color: $color-bg-default;
     display: flex;
     flex-flow: column;
     margin: 0 auto;
-    max-width: 90vw;
+    max-width: 70vw;
+    padding: 20px 20px 20px 20px;
 }
 
 header, section, footer {
@@ -45,17 +56,9 @@ header, section, footer {
     width:100%;
 }
 
-#sobre {
-    background-color: white;
-}
 
 #produtos {
     font-size: large;
 }
 
 
-
-.bg-bureau {
-    background-image: url('./../assets/images/bureau.jpg');
-}
- 

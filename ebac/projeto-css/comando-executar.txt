@@ -4,3 +4,8 @@ npm rebuild node-sass
 
 yarn global add node-sass
 
+-------------------
+
+ yarn install 
+
+ yarn run dev 

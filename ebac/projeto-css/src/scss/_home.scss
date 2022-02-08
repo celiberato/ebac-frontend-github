@@ -1,16 +1,14 @@
 @import 'vars';
 
-@media(max-width: 450px){
-    .root_title {
-        font-size: 0.8rem;
-    }
-
-    .root_link{
-        font-size: 0.8rem;
-    }
-}
 
 .root{
+
+    &__img {
+        background-repeat: no-repeat;
+        width: 50%;
+        align-self: center;
+        margin-bottom: 20px;
+    }
 
     background-color: $color-bg-default;
 

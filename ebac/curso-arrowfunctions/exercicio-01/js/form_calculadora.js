@@ -37,12 +37,12 @@ if(formulario1)
 
         validacaoTodosPreenchidos(todosNumerosPreenchidos);
         
-        let dados = new FormData(this);
+        const dados = new FormData(this);
 
-        let notas = [];
+        const notas = [];
 
         for(let key of dados.keys()) {
-            let numero = converteNumero(dados.get(key));
+            const numero = converteNumero(dados.get(key));
             if(!isNaN(numero)) {
                 notas.push(numero);
             }

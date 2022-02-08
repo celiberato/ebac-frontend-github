@@ -98,9 +98,9 @@ function invocaValidacaoUF(elemento){
 
 
 function invocaValidacaoTelefone(elemento){
-    let contemTraco = elemento.value.includes('-');
+    const contemTraco = elemento.value.includes('-');
 
-    let numero = elemento.value.match(/^[\d]2-[\d]9/) ? elemento.value.replace(/-/, "") : elemento.value; 
+    const numero = elemento.value.match(/^[\d]2-[\d]9/) ? elemento.value.replace(/-/, "") : elemento.value; 
 
     if(numero != "" && numero==elemento.value && contemTraco){
         campoValidado(elemento, '.erro-telefone');
@@ -114,9 +114,9 @@ function invocaValidacaoTelefone(elemento){
 
 
 function invocaValidacaoCEP(elemento){
-    let contemTraco = elemento.value.includes('-');
+    const contemTraco = elemento.value.includes('-');
 
-    let numero = elemento.value.match(/^[\d]5-[\d]3/) ? elemento.value.replace(/-/, "") : elemento.value; 
+    const numero = elemento.value.match(/^[\d]5-[\d]3/) ? elemento.value.replace(/-/, "") : elemento.value; 
 
     if(numero != "" && numero==elemento.value && contemTraco){
         campoValidado(elemento, '.erro-cep');
@@ -130,7 +130,7 @@ function invocaValidacaoCEP(elemento){
 
 
 function invocaValidacaoCidade(elemento){
-    let texto = elemento.value; 
+    const texto = elemento.value; 
 
     if(texto != ""){
         campoValidado(elemento, '.erro-cidade');
@@ -143,13 +143,13 @@ function invocaValidacaoCidade(elemento){
 }
 
 function disparaEventosValidacoes(){
-    let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
-    let camposNome = document.querySelectorAll('input.nome');
-    let camposEmail = document.querySelectorAll('input.email');
-    let camposUF = document.querySelectorAll('input.uf');
-    let camposTelefone = document.querySelectorAll('input.telefone');
-    let camposCEP = document.querySelectorAll('input.cep');
-    let camposCidade = document.querySelectorAll('input.cidade');
+    const camposObrigatorios = document.querySelectorAll('input.obrigatorio');
+    const camposNome = document.querySelectorAll('input.nome');
+    const camposEmail = document.querySelectorAll('input.email');
+    const camposUF = document.querySelectorAll('input.uf');
+    const camposTelefone = document.querySelectorAll('input.telefone');
+    const camposCEP = document.querySelectorAll('input.cep');
+    const camposCidade = document.querySelectorAll('input.cidade');
     
     for( let emFoco of camposNome) {
         validNome(emFoco);
@@ -179,13 +179,13 @@ function disparaEventosValidacoes(){
 
 
 function invocaValidacoes(){
-    let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
-    let camposNome = document.querySelectorAll('input.nome');
-    let camposEmail = document.querySelectorAll('input.email');
-    let camposUF = document.querySelectorAll('input.uf');
-    let camposTelefone = document.querySelectorAll('input.telefone');
-    let camposCEP = document.querySelectorAll('input.cep');
-    let camposCidade = document.querySelectorAll('input.cidade');
+    const camposObrigatorios = document.querySelectorAll('input.obrigatorio');
+    const camposNome = document.querySelectorAll('input.nome');
+    const camposEmail = document.querySelectorAll('input.email');
+    const camposUF = document.querySelectorAll('input.uf');
+    const camposTelefone = document.querySelectorAll('input.telefone');
+    const camposCEP = document.querySelectorAll('input.cep');
+    const camposCidade = document.querySelectorAll('input.cidade');
     
     for( let emFoco of camposNome) {
         invocaValidacaoNome(emFoco);
@@ -224,7 +224,7 @@ if(formulario2)
         invocaValidacoes();
 
        
-        let todosPreenchidos = 
+        const todosPreenchidos = 
                 document.getElementById('nome').value!="" &&
                 document.getElementById('email').value!="" &&
                 document.getElementById('telefone').value!="" &&

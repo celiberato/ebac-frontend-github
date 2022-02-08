@@ -1,44 +1,78 @@
-function calcularMedia( notas ) {
+// FORMULÁRIO 1:------------------------------
+var media = (p_soma, p_notas) => p_soma / p_notas.length;
+var condicao = (p_media) => p_media >= 8 ? "aprovado" : "reprovado";
+var proximoNumero = (p_numero) => p_numero - 1;
+var todosPreenchidos = (n1, n2, n3, n4) => n1!="" && n2!="" && n3!="" && n4!=""; 
+var validacaoTodosPreenchidos = (todosNumerosPreenchidos) => {
+    if( !todosNumerosPreenchidos ) {
+        document.getElementById('resultado-frm1').innerHTML = "• Necessário preencher todos os campos";
+        return false;
+    }
+    return true;
+}
+var converteNumero = (dado) =>  dado.match(/\d*/) ? Number(dado) : 0;
+var calcularMedia = ( notas ) => { m_soma = 0; notas.forEach( nota => m_soma += nota ); return media(m_soma, notas); }
+var aprovacao = ( notas ) => { return 'Média: ' + calcularMedia( notas ) + ' - Resultado: ' + condicao(calcularMedia(notas)); }
 
-    let soma = 0;
+var contagemRegressiva = (numero) => { if(proximoNumero > 0) contagemRegressiva( proximoNumero(numero) ) };
 
-    notas.forEach(
-         nota => soma += nota
-    )
-
-    media = soma / notas.length;
-
-    return media;
-
+// FORMULARIO 2:------------------------------
+var validNome = (elemento) => { 
+    elemento.addEventListener('focusout', function(event) {
+        event.preventDefault();
+        invocaValidacaoNome(this);
+    });
 }
 
-let media; // escopo global
-
-function aprovacao( notas ) {
-
-    let media = calcularMedia( notas ); // escopo da função
-
-    let condicao = media >= 8 ? "aprovado" : "reprovado";
-
-    return 'Média: ' + media + ' - Resultado: ' + condicao;
-
+var validEmail = (elemento) => {
+    elemento.addEventListener('focusout', function(event) {
+        event.preventDefault();
+        invocaValidacaoEmail(this);
+    });
 }
 
-
-// Função Recursivas
-
-function contagemRegressiva(numero){
-
-    console.log(numero);  
-    
-    let proximoNumero = numero - 1;
-
-    if(proximoNumero > 0)
-        contagemRegressiva(proximoNumero);
-
+var validUF = (elemento) => {
+    elemento.addEventListener('focusout', function(event) {
+        event.preventDefault();
+        invocaValidacaoUF(this);
+    });
 }
 
-// contagemRegressiva(50);
+var validTelefone = (elemento) => {
+    elemento.addEventListener('focusout', function(event) {
+        event.preventDefault();
+        invocaValidacaoTelefone(this);
+    });
+}
+var validCEP = (elemento) => {
+    elemento.addEventListener('focusout', function(event) {
+        event.preventDefault();
+        invocaValidacaoCEP(this);
+    });
+}
+var validCidade = (elemento) => {
+    elemento.addEventListener('focusout', function(event) {
+        event.preventDefault();
+        invocaValidacaoCidade(this);
+    });
+}
+
+var campoValidado = (elemento, classe) => {
+    document.querySelector(classe).innerHTML = '';
+    elemento.classList.remove('erro');
+    elemento.parentNode.classList.remove('erro');
+}
+
+var campoInvalido = (elemento) => {
+    elemento.classList.add('erro');
+    elemento.parentNode.classList.add('erro');
+    document.getElementById('resultado-frm2').innerHTML = "";
+}
+
+// --------------------------------------------------
+
+
+
 
 /* 
  * Formulário envio de dados para cálculo da média 
@@ -51,29 +85,24 @@ if(formulario1)
         evento.preventDefault();
         evento.stopPropagation();
 
-        let todosPreenchidos = document.getElementsByClassName('n1')!="" && 
-                document.getElementsByClassName('n2')!="" &&
-                document.getElementsByClassName('n3')!="" &&
-                document.getElementsByClassName('n4')!="";
+        var todosNumerosPreenchidos = todosPreenchidos(
+                document.getElementsByClassName('n1'), 
+                document.getElementsByClassName('n2'),
+                document.getElementsByClassName('n3'),
+                document.getElementsByClassName('n4'));
 
 
-        if( !todosPreenchidos ) {
-            document.getElementById('resultado-frm1').innerHTML = "• Necessário preencher todos os campos";
-            return false;
-        }
+        validacaoTodosPreenchidos(todosNumerosPreenchidos);
         
         let dados = new FormData(this);
 
         let notas = [];
 
         for(let key of dados.keys()) {
-
-            let numero = dados.get(key).match(/\d*/) ? Number(dados.get(key)) : 0; // é um número
-
+            let numero = converteNumero(dados.get(key));
             if(!isNaN(numero)) {
                 notas.push(numero);
             }
-
         }
 
         console.log(notas);
@@ -86,70 +115,28 @@ if(formulario1)
 
 disparaEventosValidacoes();
 
-function validNome(elemento){
 
-    elemento.addEventListener('focusout', function(event) {
-
-        event.preventDefault();
-
-        invocaValidacaoNome(this);
-    });
-
-}
-
-function invocaValidacaoNome(elemento){
-    if(elemento.value == ""){
-        document.querySelector('.erro-nome').innerHTML = "• Favor preencher o nome";
-        elemento.classList.add('erro');
-        elemento.parentNode.classList.add('erro');
-        return false;
+var invocaValidacaoNome = (elemento) => {
+    if(elemento.value != ""){
+        campoValidado(elemento, '.erro-nome');
     } else {
-        document.querySelector('.erro-nome').innerHTML = '';
-        elemento.classList.remove('erro');
-        elemento.parentNode.classList.remove('erro');
+        document.querySelector('.erro-nome').innerHTML = "• Favor preencher o nome";
+        campoInvalido(elemento)
+        return false;
     }
 }
-
-
-function validEmail(elemento){
-
-    elemento.addEventListener('focusout', function(event) {
-
-        event.preventDefault();
-
-        invocaValidacaoEmail(this);
-
-    });
-
-}
-
 
 function invocaValidacaoEmail(elemento){
     const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
     if(elemento.value.match(emailValido)) {
-        document.querySelector('.erro-email').innerHTML = "";
-        elemento.classList.remove('erro');
-        elemento.parentNode.classList.remove('erro');
+        campoValidado(elemento, '.erro-email');
     } else {
         document.querySelector('.erro-email').innerHTML = "• Favor preecher o campo email";
-        elemento.classList.add('erro');
-        elemento.parentNode.classList.add('erro');
+        campoInvalido(elemento)
         return false;
     }
 
 }
-
-function validUF(elemento){
-
-    elemento.addEventListener('focusout', function(event) {
-
-        event.preventDefault();
-
-        invocaValidacaoUF(this);
-    });
-
-}
-
 
 function invocaValidacaoUF(elemento){
     const listaUF = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "GO", "ES", "MA",
@@ -157,28 +144,15 @@ function invocaValidacaoUF(elemento){
     "RS", "RO", "RR", "SP", "SC", "SE", "TO"];
 
     if(listaUF.includes(elemento.value.toUpperCase())) {
-        document.querySelector('.erro-uf').innerHTML = "";
-        elemento.classList.remove('erro');
-        elemento.parentNode.classList.remove('erro');
+        campoValidado(elemento, '.erro-uf');
     } else {
         document.querySelector('.erro-uf').innerHTML = "• Favor preecher o campo UF no formato XX";
-        elemento.classList.add('erro');
-        elemento.parentNode.classList.add('erro');
+        campoInvalido(elemento)
         return false;
     }
 
 }
 
-function validTelefone(elemento){
-
-    elemento.addEventListener('focusout', function(event) {
-
-        event.preventDefault();
-
-        invocaValidacaoTelefone(this);
-    });
-
-}
 
 function invocaValidacaoTelefone(elemento){
     let contemTraco = elemento.value.includes('-');
@@ -186,30 +160,15 @@ function invocaValidacaoTelefone(elemento){
     let numero = elemento.value.match(/^[\d]2-[\d]9/) ? elemento.value.replace(/-/, "") : elemento.value; 
 
     if(numero != "" && numero==elemento.value && contemTraco){
-        document.querySelector('.erro-telefone').innerHTML = "";
-        elemento.classList.remove('erro');
-        elemento.parentNode.classList.remove('erro');
+        campoValidado(elemento, '.erro-telefone');
     } else {
         document.querySelector('.erro-telefone').innerHTML = "• Favor preecher o campo telefone no formato 00-000000000";
-        elemento.classList.add('erro');
-        elemento.parentNode.classList.add('erro');
+        campoInvalido(elemento)
         return false;
     }
 
 }
 
-function validCEP(elemento){
-
-    elemento.addEventListener('focusout', function(event) {
-
-        event.preventDefault();
-
-
-        invocaValidacaoCEP(this);
-
-    });
-
-}
 
 function invocaValidacaoCEP(elemento){
     let contemTraco = elemento.value.includes('-');
@@ -217,28 +176,12 @@ function invocaValidacaoCEP(elemento){
     let numero = elemento.value.match(/^[\d]5-[\d]3/) ? elemento.value.replace(/-/, "") : elemento.value; 
 
     if(numero != "" && numero==elemento.value && contemTraco){
-        document.querySelector('.erro-cep').innerHTML = "";
-        elemento.classList.remove('erro');
-        elemento.parentNode.classList.remove('erro');
+        campoValidado(elemento, '.erro-cep');
     } else {
         document.querySelector('.erro-cep').innerHTML = "• Favor preecher o campo cep";
-                    
-        elemento.classList.add('erro');
-        elemento.parentNode.classList.add('erro');
+        campoInvalido(elemento)
         return false;
     }
-
-}
-
-function validCidade(elemento){
-
-    elemento.addEventListener('focusout', function(event) {
-
-        event.preventDefault();
-
-        invocaValidacaoCidade(this);
-
-    });
 
 }
 
@@ -247,14 +190,10 @@ function invocaValidacaoCidade(elemento){
     let texto = elemento.value; 
 
     if(texto != ""){
-        document.querySelector('.erro-cidade').innerHTML = "";
-        elemento.classList.remove('erro');
-        elemento.parentNode.classList.remove('erro');
+        campoValidado(elemento, '.erro-cidade');
     } else {
         document.querySelector('.erro-cidade').innerHTML = "• Favor preecher o campo cidade";
-                    
-        elemento.classList.add('erro');
-        elemento.parentNode.classList.add('erro');
+        campoInvalido(elemento)
         return false;
     }
 

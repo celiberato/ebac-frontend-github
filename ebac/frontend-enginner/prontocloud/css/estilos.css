@@ -11,12 +11,6 @@ body {
     line-height: 1.9rem;
 }
 
-.main-container {
-    width: 1198px;
-    margin: 0 auto;
-    background-color: white;
-}
-
 header {
     background-color: slateblue;
     padding: 3rem;
@@ -64,7 +58,7 @@ nav ul li{
 section article {
     display: block;
     float: left;
-    width: 74%;
+    width: 200%;
     background-color: rgb(49, 18, 119);
 }
 

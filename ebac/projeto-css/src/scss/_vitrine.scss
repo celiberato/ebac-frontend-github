@@ -1,9 +1,28 @@
 @import 'vars';
 
+.root__img{
+    width: 70% !important;
+}
+
 .vitrine {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
+
+    vitrine__button{
+        width: 13rem;
+        text-align: center;
+    }
+
+    vitrine__button span{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    &__produto{
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
 
     &__title{
         display: flex;
@@ -30,7 +49,10 @@
     }
 
     &__image {
-        width: 100%;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+        margin: 0 auto;
     }
 
     &__button {
@@ -50,5 +72,18 @@
             opacity: 0.5;
             box-shadow: 5px 5px 10px 1px rgba(30, 11, 106, 0.5); 
         }
+    }
+}
+
+
+@media(max-width: 600px){
+    .vitrine__button{
+        width: 120px;
+        height: 50px;
+        text-align: center;
+    }
+    .vitrine__button span{
+        font-size: 1.3rem;
+        text-align: center;
     }
 }

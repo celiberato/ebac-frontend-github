@@ -1,51 +1,51 @@
 // FORMULARIO 2:------------------------------
-var validNome = (elemento) => { 
+const validNome = (elemento) => { 
     elemento.addEventListener('focusout', function(event) {
         event.preventDefault();
         invocaValidacaoNome(this);
     });
 }
 
-var validEmail = (elemento) => {
+const validEmail = (elemento) => {
     elemento.addEventListener('focusout', function(event) {
         event.preventDefault();
         invocaValidacaoEmail(this);
     });
 }
 
-var validUF = (elemento) => {
+const validUF = (elemento) => {
     elemento.addEventListener('focusout', function(event) {
         event.preventDefault();
         invocaValidacaoUF(this);
     });
 }
 
-var validTelefone = (elemento) => {
+const validTelefone = (elemento) => {
     elemento.addEventListener('focusout', function(event) {
         event.preventDefault();
         invocaValidacaoTelefone(this);
     });
 }
-var validCEP = (elemento) => {
+const validCEP = (elemento) => {
     elemento.addEventListener('focusout', function(event) {
         event.preventDefault();
         invocaValidacaoCEP(this);
     });
 }
-var validCidade = (elemento) => {
+const validCidade = (elemento) => {
     elemento.addEventListener('focusout', function(event) {
         event.preventDefault();
         invocaValidacaoCidade(this);
     });
 }
 
-var campoValidado = (elemento, classe) => {
+const campoValidado = (elemento, classe) => {
     document.querySelector(classe).innerHTML = '';
     elemento.classList.remove('erro');
     elemento.parentNode.classList.remove('erro');
 }
 
-var campoInvalido = (elemento) => {
+const campoInvalido = (elemento) => {
     elemento.classList.add('erro');
     elemento.parentNode.classList.add('erro');
     document.getElementById('resultado-frm2').innerHTML = "";
@@ -59,7 +59,7 @@ var campoInvalido = (elemento) => {
 disparaEventosValidacoes();
 
 
-var invocaValidacaoNome = (elemento) => {
+const invocaValidacaoNome = (elemento) => {
     if(elemento.value != ""){
         campoValidado(elemento, '.erro-nome');
     } else {

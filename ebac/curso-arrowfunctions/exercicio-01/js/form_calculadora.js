@@ -1,20 +1,20 @@
 // FORMULÁRIO 1:------------------------------
-var media = (p_soma, p_notas) => p_soma / p_notas.length;
-var condicao = (p_media) => p_media >= 8 ? "aprovado" : "reprovado";
-var proximoNumero = (p_numero) => p_numero - 1;
-var todosPreenchidos = (n1, n2, n3, n4) => n1!="" && n2!="" && n3!="" && n4!=""; 
-var validacaoTodosPreenchidos = (todosNumerosPreenchidos) => {
+const media = (p_soma, p_notas) => p_soma / p_notas.length;
+const condicao = (p_media) => p_media >= 8 ? "aprovado" : "reprovado";
+const proximoNumero = (p_numero) => p_numero - 1;
+const todosPreenchidos = (n1, n2, n3, n4) => n1!="" && n2!="" && n3!="" && n4!=""; 
+const validacaoTodosPreenchidos = (todosNumerosPreenchidos) => {
     if( !todosNumerosPreenchidos ) {
         document.getElementById('resultado-frm1').innerHTML = "• Necessário preencher todos os campos";
         return false;
     }
     return true;
 }
-var converteNumero = (dado) =>  dado.match(/\d*/) ? Number(dado) : 0;
-var calcularMedia = ( notas ) => { m_soma = 0; notas.forEach( nota => m_soma += nota ); return media(m_soma, notas); }
-var aprovacao = ( notas ) => { return 'Média: ' + calcularMedia( notas ) + ' - Resultado: ' + condicao(calcularMedia(notas)); }
+const converteNumero = (dado) =>  dado.match(/\d*/) ? Number(dado) : 0;
+const calcularMedia = ( notas ) => { m_soma = 0; notas.forEach( nota => m_soma += nota ); return media(m_soma, notas); }
+const aprovacao = ( notas ) => { return 'Média: ' + calcularMedia( notas ) + ' - Resultado: ' + condicao(calcularMedia(notas)); }
 
-var contagemRegressiva = (numero) => { if(proximoNumero > 0) contagemRegressiva( proximoNumero(numero) ) };
+const contagemRegressiva = (numero) => { if(proximoNumero > 0) contagemRegressiva( proximoNumero(numero) ) };
 
 
 /* 
@@ -28,7 +28,7 @@ if(formulario1)
         evento.preventDefault();
         evento.stopPropagation();
 
-        var todosNumerosPreenchidos = todosPreenchidos(
+        const todosNumerosPreenchidos = todosPreenchidos(
                 document.getElementsByClassName('n1'), 
                 document.getElementsByClassName('n2'),
                 document.getElementsByClassName('n3'),

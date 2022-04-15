@@ -79,6 +79,11 @@ nav ul li{
     width: 100px;
 }
 
+nav .btn-lg{
+    font-size: 2rem !important;
+}
+
+
 section article {
     display: block;
     float: left;
@@ -295,8 +300,12 @@ dd {
 
     .container-fluid {
         width: 400px !important;
-      }
-  
+    }
+
+    nav .btn-lg{
+        font-size: 2rem !important;
+    }
+     
 }
   
 #saiba-mais h1 {

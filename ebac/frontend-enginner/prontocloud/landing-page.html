@@ -43,22 +43,22 @@
                 <div class="row">
                     <div class="col-12 col-sm-3">
                         <div class="d-grid gap-2">
-                            <a class="btn btn-primary" href="#">Home</a>
+                            <a class="btn btn-primary btn-lg" href="#">Home</a>
                         </div>
                     </div>
                     <div class="col-12 col-sm-3">
                         <div class="d-grid gap-2">
-                            <a  class="btn btn-primary" href="#saiba-mais">Saiba mais</a>
+                            <a  class="btn btn-primary btn-lg" href="#saiba-mais">Saiba mais</a>
                         </div>
                     </div>
                     <div class="col-12 col-sm-3">
                         <div class="d-grid gap-2">
-                            <a class="btn btn-primary" href="#tenho-interesse">Tenho interesse</a>
+                            <a class="btn btn-primary btn-lg" href="#tenho-interesse">Tenho interesse</a>
                         </div>
                     </div>
                     <div class="col-12 col-sm-3">
                         <div class="d-grid gap-2">
-                            <a class="btn btn-primary"  href="#duvidas-frequentes">Dúvidas Frequêntes</a>
+                            <a class="btn btn-primary btn-lg"  href="#duvidas-frequentes">Dúvidas Frequêntes</a>
                         </div>
                     </div>
                 </div>
@@ -113,9 +113,11 @@
 
                     </form>                    
 
+                    <div style="font-weight: 900; visibility: hidden; text-align: center; background-color: white; color: green; font-size: 1.6rem;" id="msg_validcao_sucesso">Dados enviados com sucessso!</div>
+                    <div style="font-weight: 900; visibility: hidden; text-align: center; background-color: white; color: red; font-size: 1.6rem;" id="msg_validcao_erro">Favor preencher todos os campos!</div>
                         
                     <center>
-                        <a class="button-cta-rodape filtro-btn" href="#">Tenho interesse</a>
+                        <a class="button-cta-rodape filtro-btn" onclick="enviarForm();">Enviar</a>
                     </center>
                 </div>
 
@@ -149,5 +151,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>

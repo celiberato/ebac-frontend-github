@@ -80,7 +80,7 @@ nav ul li{
 }
 
 nav .btn-lg{
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
 }
 
 
@@ -293,7 +293,7 @@ dd {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     header {
       width: 400px !important;
     }
@@ -303,11 +303,47 @@ dd {
     }
 
     nav .btn-lg{
-        font-size: 2rem !important;
+        font-size: 2.4rem !important;
     }
      
 }
-  
+
+@media (max-width: 599px) {
+    header {
+      width: 400px !important;
+    }
+
+    .container-fluid {
+        width: 400px !important;
+    }
+
+    nav .btn-lg{
+        font-size: 2.0rem !important;
+        height: 40px !important;
+        vertical-align: auto;
+        margin-bottom: 5px;
+    }
+     
+}
+
+
+@media (max-width: 800px) {
+    header {
+      width: 400px !important;
+    }
+
+    .container-fluid {
+        width: 400px !important;
+    }
+
+    nav .btn-lg{
+        font-size: 1.6rem !important;
+        height: 60px;
+        vertical-align: middle;
+    }
+     
+}
+
 #saiba-mais h1 {
     padding-top: 20px;
 }

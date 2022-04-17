@@ -1,0 +1,101 @@
+
+
+
+<div class="row" style="margin-top: 50px;">
+  <div class="col-12" style="text-align: center; margin-bottom: 20px;">
+    <h3>Manipulação de Dados (Angular)</h3>
+  </div>
+  <div class="col-3"></div>
+  <div class="col-6 mb-30" style="text-align: center;">
+      <button class="btn btn-primary mr-30" (click) = "generateCarros()">Gerar lista de Carros</button>
+      <button class="btn btn-primary mr-30" (click) = "generateMotos()">Gerar lista de Motos</button>
+      <button class="btn btn-primary" (click) = "limparTudo()">Limpar</button>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-3"></div>
+
+  <div class="col-6 container-carro">
+    
+    
+    <div class="row g-3 align-items-center">
+      <div class="col-6">
+      </div>
+
+      <div class="col-3">
+        <h5>Lista de Carros:</h5>
+      </div>
+      <div class="col-3">
+        <input type="text" id="filtroCarro" class="form-control form-control-sm" (keyup)="aplcarFiltroCarro($event)">
+      </div>
+    </div>
+
+
+
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Qt.Portas</th>
+          <th scope="col">Valor</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let carro of listaCarros; let i = index">
+        <tr>
+          <th scope="row">{{i}}</th>
+          <td>{{carro.marca}}</td>
+          <td>{{carro.modelo}}</td>
+          <td>{{carro.portas}}</td>
+          <td>{{carro.valor}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</div>
+
+
+<div class="row">
+  <div class="col-3"></div>
+
+  <div class="col-6 container-carro">
+    
+    
+    <div class="row g-3 align-items-center">
+      <div class="col-6">
+      </div>
+
+      <div class="col-3">
+        <h5>Lista de Motos:</h5>
+      </div>
+      <div class="col-3">
+        <input type="text" id="filtroMoto" class="form-control form-control-sm" (keyup)="aplcarFiltroMoto($event)" >
+      </div>
+    </div>
+
+
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Marca</th>  
+          <th scope="col">Modelo</th>
+          <th scope="col">Valor</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let moto of listaMotos; let i = index">
+        <tr>
+          <th scope="row">{{i}}</th>
+          <td>{{moto.marca}}</td>
+          <td>{{moto.modelo}}</td>
+          <td>{{moto.valor}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+
+</div>

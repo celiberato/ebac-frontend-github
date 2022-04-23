@@ -11,10 +11,10 @@
     height: max-content;
     justify-content: center;
     align-items: center;
-    margin: 4rem auto;
+    margin: 0 auto;
 
     video {
-        width: 600px;
+        width: 50%;
         height: auto;
     }
 
@@ -22,7 +22,7 @@
         background-color: #000;
         position: absolute;
         bottom: 0;
-        width: 100%;
+        width: 50%;
         display: flex;
         justify-content: space-around;
         opacity: 0.2;
@@ -65,3 +65,42 @@
 
     }
 }
+
+@media (max-width: 1200px) { 
+    #player video {
+      margin-left: -180px;
+    }
+
+    .controls {
+        margin-left: -180px;
+    }
+}
+
+@media (max-width: 1000px) { 
+    #player video {
+      margin-left: -230px;
+    }
+
+    .controls {
+        margin-left: -230px;
+    }
+}
+  
+@media (max-width: 800px) { 
+  #player video {
+    margin-left: -280px;
+    }
+    .controls {
+        margin-left: -280px;
+    }
+}
+
+@media (max-width: 600px) { 
+    #player video {
+      margin-left: -400px;
+      }
+      .controls {
+        margin-left: -400px;
+    }
+  }
+  

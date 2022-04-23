@@ -8,7 +8,7 @@
     <title>Framework Simulator</title>
 </head>
 <body>
-    <div id="root">
+    <div class="container">
         <header id="vetoriais">
             <h1>Framework Simulator</h1>
 
@@ -23,7 +23,7 @@
 
         <section>
             <div style="text-align: center; margin-top: 50px;">
-                <svg id="cog1" xmlns="http://www.w3.org/2000/svg" width="30%" height="30%" viewBox="0 0 16 16" style="">
+                <svg id="cog1" xmlns="http://www.w3.org/2000/svg" width="10%" height="10%" viewBox="0 0 16 16" style="">
                     <path fill="none" stroke="blue" stroke-width="0.2" d="M2.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm2 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm7.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm1.5.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm-7-1a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm5.5 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" class="hdwrWlEk_0"></path>
                     <path fill="none" stroke="blue" stroke-width="0.2" d="M11.5 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0-1a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 10.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" class="hdwrWlEk_1"></path>
                     <path fill="none" stroke="blue" stroke-width="0.2" d="M7 10.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-1 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" class="hdwrWlEk_2"></path>
@@ -36,7 +36,7 @@
         <section>
             <div style="text-align: center; margin-top: 50px;">
 
-                <svg id="cog1" xmlns="http://www.w3.org/2000/svg" width="30%" height="30%" viewBox="0 0 16 16" style="">
+                <svg id="cog1" xmlns="http://www.w3.org/2000/svg" width="10%" height="10%" viewBox="0 0 16 16" style="">
                     <path fill="none" stroke="blue" stroke-width="0.2" d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z" class="DqhDRPkc_0"></path>
                   <style data-made-with="vivus-instant">.DqhDRPkc_0{stroke-dasharray:163 165;stroke-dashoffset:164;animation:DqhDRPkc_draw_0 4300ms ease-in-out 0ms infinite,DqhDRPkc_fade 4300ms linear 0ms infinite;}@keyframes DqhDRPkc_draw{100%{stroke-dashoffset:0;}}@keyframes DqhDRPkc_fade{0%{stroke-opacity:1;}81.3953488372093%{stroke-opacity:1;}100%{stroke-opacity:0;}}@keyframes DqhDRPkc_draw_0{23.25581395348837%{stroke-dashoffset: 164}69.76744186046511%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}</style></svg>           
             </div>      
@@ -46,27 +46,18 @@
 
 
         <section id="video-container">
-            <h2>Video Player</h2>
+            <h2 style="margin: 30px 30px 30px 30px; text-align: center;">Video Player</h2>
             <div class="container">
                 <div id="player">
-                    <video id="video" src="./assets/video.mp4"></video>
-                    <div class="controls">
-                        <button id="btn-play">
-                            <i class="fa fa-play"></i>
-                            <i class="fa fa-pause"></i>
-                        </button>
-                        <div class="timeline">
-                            <div class="bar">
-                                <div class="inner"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <video controls>
+                        <source src="./assets/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                    </video>
                 </div>
             </div>
         </section>
 
         <section id="imagens">
-            <h2>Galeria de Imagens</h2>
+            <h2 style="margin: 30px 30px 30px 30px; text-align: center;">Galeria de Imagens</h2>
             <div class="container">
                 <img src="./assets/images/pexels-cottonbro-4604662.jpg" alt="imagem 1 ">
                 <img src="./assets/images/pexels-cottonbro-4604663.jpg" alt="imagem 2">

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax - STARWARS</title>
+    <!--link rel="stylesheet" href="./css/reset.css"-->
+    <link rel="stylesheet" href="./css/estilos-index.css">
+
+    <link rel="shortcut icon" href="./imagens/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="row header-text"">
+                <div class="col-12 titulo">
+                    <span>&copy; AJAX - STARWARS</span>
+                </div>
+            </div>
+            <div class="row header-imagem">
+                <div class="col-12">
+                    <img class="img-header" src="./imagens/logo3.jpg"/>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <nav>
+                <div class="row">
+                    <center>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <center>
+                                    <img src="./imagens/c3po.png" alt="C3=PO">
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-12 col-md-4">
+                                <a id="btn-importar" class="btn btn-primary btn-lg mt-20 ml-20 mr-20 w-100" onclick="clickImportarPlanetas();">Carregar Planetas</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-12 col-md-4">
+                                <a id="btn-limpar" class="btn btn-primary btn-lg mt-20 ml-20 mr-20 w-100" onclick="clickLimparPlanetas();">Limpar</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <center class="mt-20 mb-20">
+                                <div class="col-sm-4 col-md-6 my-1">
+                                    <div class="input-group">
+                                      <input class="form-control" id="pesquisar" type="search" placeholder="Pesquisar" aria-label="Search" style="border-right: none;">
+                                      <div class="input-group-append">
+                                        <div class="input-group-text" style="background-color: #FFF; cursor: pointer; "><i class="fas fa-search" onclick="clickPesquisar();" style="margin-top: 10px; cursor: pointer;"></i></div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                        <div class="row" style="width: 400px;">
+                            <div id="msg_validacao" class="alert alert-danger alert-dismissible fade show mb-30" role="alert">
+                                <div>
+                                    <span id="msg_html" class="mt-30">Você pesquisou o planeta xxxxxxxx</span>
+                                    <a style="cursor: pointer;" onclick="clickCloseAlert();"><span aria-hidden="true">&times;</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </nav>
+        </section>
+
+
+        <section>       
+            <!-- Modal -->
+            <div class="modal fade" id="modalAtor" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="./imagens/logo4.jpg"/>    
+                            <h3 class="modal-title" id="exampleModalLongTitle" style="margin-right: 30px; font-weight: bolder; color: red; text-align: center;">Ficha Técnica do Personagem</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div id="ator">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="hideModalAtor();">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-12 col-md-9">
+                    <div id="planetas"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            &copy; Todos os direitos reservados
+            <br>
+            <small>Desenvolvido por Carlos Liberato</small>
+        </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

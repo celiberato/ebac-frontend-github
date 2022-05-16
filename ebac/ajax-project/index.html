@@ -67,7 +67,7 @@
                         <div class="row" style="width: 400px;">
                             <div id="msg_validacao" class="alert alert-danger alert-dismissible fade show mb-30" role="alert">
                                 <div>
-                                    <span id="msg_html" class="mt-30">Você pesquisou o planeta xxxxxxxx</span>
+                                    <span id="msg_html" class="mt-30" style="font-size: 0.8rem;">Você pesquisou o planeta xxxxxxxx</span>
                                     <a style="cursor: pointer;" onclick="clickCloseAlert();"><span aria-hidden="true">&times;</span></a>
                                 </div>
                             </div>
@@ -85,8 +85,16 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <img src="./imagens/logo4.jpg"/>    
-                            <h3 class="modal-title" id="exampleModalLongTitle" style="margin-right: 30px; font-weight: bolder; color: red; text-align: center;">Ficha Técnica do Personagem</h3>
+                            <div class="row">
+                                <div class="col-3">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img src="./imagens/logo4.jpg" style="text-align: center;"/>    
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <h3 id="modal-ficha">Ficha Técnica do Personagem</h3>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-body">
                             <div id="ator">

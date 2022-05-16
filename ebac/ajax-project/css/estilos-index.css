@@ -18,7 +18,7 @@ footer {
 
 
 header .header-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center; 
     margin-left: 10%; 
     margin-right: 10%; 
@@ -92,4 +92,24 @@ header .header-imagem {
 
 .mb-20{
     margin-bottom: 20px !important;
+}
+
+
+#modal-ficha {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    vertical-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+#modal-img {
+    width: 250px;
+    text-align: center;
+}
+
+#msg_validacao{
+    width: 90%;
 }

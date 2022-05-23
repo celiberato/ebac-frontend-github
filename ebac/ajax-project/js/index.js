@@ -130,3 +130,8 @@ function clickPesquisar() {
 function clickCloseAlert(){
     $('#msg_validacao').hide();
 }
+
+
+$(document).ready(function(){
+    clickImportarPlanetas();
+})

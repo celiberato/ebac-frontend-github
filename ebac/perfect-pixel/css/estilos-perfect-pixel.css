@@ -1,0 +1,114 @@
+.container-fluid {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+#banner {
+    filter: grayscale(50%);
+    background-repeat: no-repeat;
+}
+
+
+#banner .titulo-1 {
+    margin: 20px 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+    text-align: center; 
+    color: white;
+}
+
+#banner .titulo-2 {
+    margin: -20px;
+    font-family: 'Passion One', cursive;
+    font-size: 3.6rem;
+    text-align: center; 
+    color: white;
+}
+
+.img-fotos{
+    width: 4rem;
+    height: 4rem;
+    padding: 10px 10px 10px 0px;
+}   
+
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+.btn-cadastrar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    height: 25px !important;
+    width: 200px !important;
+    align-self: flex-end;     
+} 
+
+
+.foto-ficha{
+    width: 40vw;
+    margin-top: 50px;
+}
+
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.4em;
+}
+
+.mt-50{
+    margin-top: 50px;
+}
+
+
+.mt-150{
+    margin-top: 150px;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+
+.ml-40{
+    margin-left: 40px;
+}
+
+.mr-100{
+    margin-left: 0px;
+}
+
+@media only screen and (max-width: 800px){
+    h2 {
+        font-size: 0.3rem;
+    }
+    ul li {
+        font-size: 12px;
+    } 
+}
+
+@media only screen and (max-width: 3000px){
+    .titulo-ficha{
+        margin-top: 150px;
+    }
+
+}
+
+footer {
+    margin-top: 30px;
+    background-color: slateblue;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    font-size: 1.0rem;
+}

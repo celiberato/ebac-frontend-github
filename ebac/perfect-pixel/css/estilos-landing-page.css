@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
+
+
+html{
+    font-size: 62.5%;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+body {
+    background-color: lightgray;
+    line-height: 2.5rem;
+    padding-bottom: 30px;
+}
+
+.main-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+}
+header {
+    background-color: slateblue;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.container{
+    width: 100%;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+article h1 {
+    padding: 20px;
+}
+
+
+section {
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+section::after {
+    background: #ccc;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 100%;        
+    background: rgb(160, 183, 207);
+    padding: 1.5rem;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    font-size: 2rem;
+}
+
+nav ul li{
+    font-size: 1.6rem;
+}
+
+.btn-nav{
+    width: 100px;
+}
+
+nav .btn-lg{
+    font-size: 1.6rem !important;
+}
+
+
+section article {
+    display: block;
+    float: left;
+    background-color: rgb(49, 18, 119);
+}
+
+.titulo {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 1.5em;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h1{
+    font-size: 3rem;
+    color:white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 2rem;
+    color:rgb(218, 204, 252);
+}
+h3{
+    font-size: 1.8rem;
+    color: white;
+}
+#banner h4{
+    font-size: 3.6rem;
+    color: white;
+    padding-top: 20px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0 red
+}
+
+
+#banner h5 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 900;
+    text-shadow: 2px 2px 0 blue
+}
+
+
+p{
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'Spline Sans', sans-serif;
+    padding: 20px 20px 20px 20px;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'Spline Sans', sans-serif;
+    padding: 10;
+}
+
+/* Style the footer */
+footer {
+    background-color: slateblue;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+}
+
+
+td ul li {
+    color: white;
+    font-size: 16px;
+    list-style-type: upper-roman;
+    margin-left: 50px;
+}
+
+td a {
+    font-size: 1.6rem;
+}
+
+
+.filtro{
+    filter: blur(0.2rem);
+}
+
+.filtro:hover{
+    filter: blur(0rem);
+    filter: sepia(10%);
+}
+
+
+input[type=text], input[type=email], textarea {
+    display: inline-block;
+    margin-top: 1px;
+    width: 100%;
+    font-size: 1.7rem;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    border-top: 1px solid  slateblue;
+    padding-top: 5px;
+}
+
+
+form div{
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+article ul li {
+    color: white;
+    font-size: 16px;
+    list-style-type: upper-roman;
+    margin-left: 50px;
+}
+
+#banner {
+    background-image: url(./../imagens/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100% !important;
+    filter: grayscale(50%);
+}
+
+.legenda {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    margin-top: 90px; 
+    position: absolute;
+    margin-left: 35%;
+    padding: 20px;
+}
+
+.legenda h4 {
+    font-size: 3.5rem;
+    color: black;
+}
+
+.legenda h5 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.button-cta {
+    display: block;
+    background-color: chocolate;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 2px 2px 5px black;
+    width: 15rem;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.button-cta-rodape {
+    display: block;
+    background-color: chocolate;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 2px 2px 5px black;
+    padding: 15px 20px;
+    width: 30rem;
+    margin-left: 50%;
+    position: relative;
+    border-radius: 20px;
+    margin: 30px 0;
+}
+
+dl{
+    margin: 20px 0;
+}
+
+dt {
+    font-weight: 100;
+    font-family: 'Spline Sans', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 1.6rem;
+}
+
+dd {
+    font-weight: 100;
+    font-family: 'Spline Sans', sans-serif;
+    margin-left: 20px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.container-background{
+    margin-top: 20px;
+    background-color: rgb(95, 71, 161); 
+    border-radius: 10px;
+    padding-bottom: 2px;
+}
+
+.container-fluid{
+    width: 100% !important;
+}
+
+
+@media (max-width: 600px) {
+    nav .btn-lg{
+        font-size: 2.4rem !important;
+    }
+     
+}
+
+@media (max-width: 599px) {
+    nav .btn-lg{
+        font-size: 2.0rem !important;
+        height: 40px !important;
+        vertical-align: auto;
+        margin-bottom: 5px;
+    }
+
+    #banner h4{
+        font-size: 3rem;
+    }
+
+    #banner h5{
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+    nav .btn-lg{
+        font-size: 1.6rem !important;
+        height: 60px;
+        vertical-align: middle;
+    }
+     
+}
+
+#saiba-mais h1 {
+    padding-top: 20px;
+}
